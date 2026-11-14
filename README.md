@@ -1,1 +1,1 @@
-# contoso-pay
+# Contoso Pay

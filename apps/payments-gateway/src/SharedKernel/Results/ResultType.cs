@@ -1,0 +1,15 @@
+﻿namespace SharedKernel.Results;
+
+public enum ResultType
+{
+    Undefined = 0,
+    Ok = 200,
+    Created = 201,
+    NoContent = 204,
+    BadRequest = 400,
+    Unauthorized = 401,
+    NotFound = 404,
+    Conflict = 409,
+    UnprocessableContent = 422,
+    InternalError = 500
+}

@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/.config/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/Backoffice/">
+    <Project Path="src/Backoffice.Adapters.Persistence/Backoffice.Adapters.Persistence.csproj" Id="77253768-79d4-465f-af99-ab3c8171d962" />
+    <Project Path="src/Backoffice.API/Backoffice.API.csproj" Id="cd97110d-3d79-43fd-b238-d898a08228fa" />
+    <Project Path="src/Backoffice.Application/Backoffice.Application.csproj" />
+    <Project Path="src/Backoffice.Domain/Backoffice.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Gateway/">
+    <Project Path="src/Gateway.Adapters.Persistence/Gateway.Adapters.Persistence.csproj" Id="8d10852f-a91d-4112-8533-ccfd0f0d4fbb" />
+    <Project Path="src/Gateway.API/Gateway.API.csproj" Id="abed3e9e-e4d3-4424-ac17-c3624a0cbdd8" />
+    <Project Path="src/Gateway.Application/Gateway.Application.csproj" Id="0af7c08d-582a-496e-bb36-8547a6913af2" />
+    <Project Path="src/Gateway.Domain/Gateway.Domain.csproj" />
+  </Folder>
+  <Project Path="src/Adapters.Authorization/Adapters.Authorization.csproj" Id="b0d56b3c-37a6-410f-ad90-dac0997dd4db" />
+  <Project Path="src/Adapters.Identity/Adapters.Identity.csproj" Id="ef3924c3-8748-4aef-900b-4116f9272782" />
+  <Project Path="src/SharedKernel/SharedKernel.csproj" Id="461ff27a-8ece-40ea-a0d9-876b8cded88f" />
+</Solution>
