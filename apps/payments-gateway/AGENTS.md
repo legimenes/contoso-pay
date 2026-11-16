@@ -16,9 +16,12 @@ The solution is divided into the following logical projects, following a strict 
 - `Gateway.Application`: This is where the **Gateway Context** application flow is orchestrated. It contains the application's use-cases and domain services.
 - `Gateway.API`: The **Gateway Context** application's entry point. It uses the ASP.NET Core Minimal APIs pattern. It is responsible only for routing, initial dependency injection, and mapping HTTP requests to use-cases.
 - `Gateway.Adapters.Persistence`: The concrete implementation of data access to **Gateway Context**. It contains repositories, ORM configurations (such as Entity Framework Core), and database migrations. It acts as an **outbound Adapter**.
+- `Backoffice.Domain`: It contains the entities and domain rules inherent to the **Backoffice Context** business.
+- `Backoffice.Application`: This is where the **Backoffice Context** application flow is orchestrated. It contains the application's use-cases and domain services.
+- `Backoffice.API`: The **Backoffice Context** application's entry point. It uses the ASP.NET Core Minimal APIs pattern. It is responsible only for routing, initial dependency injection, and mapping HTTP requests to use-cases.
+- `Backoffice.Adapters.Persistence`: The concrete implementation of data access to **Backoffice Context**. It contains repositories, ORM configurations (such as Entity 
 - `Adapters.Authorization`: The concrete implementation of OAuth 2.0 identity. It owns `OpenIddict`, its EF Core entities and `AuthorizationDbContext`, and the credential/token ports. It acts as an **outbound Adapter**.
 - `Adapters.Identity`: The concrete implementation of user identity management. It owns `ASP.NET Core Identity`, its EF Core entities, user and role stores, and `IdentityDbContext`. It implements the user management and identity-related ports. It acts as an **outbound Adapter**.
-- `Backoffice.Domain`. Soon...
 - `Tests`: Soon... Automated testing setup covering both unit and integration tests.
 
 ## Progressive Documentation Loading
@@ -28,16 +31,16 @@ The solution is divided into the following logical projects, following a strict 
 ### Decision Tree: What to Read
 
 **IF** task involves understanding architecture:
-➜ READ `backend/.specs/docs/architecture-guide.md`
+➜ READ `.specs/docs/architecture-guide.md`
 
 **IF** task involves creating/modifying entities, use cases, services, endpoints:
-➜ READ `backend/.specs/docs/coding-patterns.md`
+➜ READ `.specs/docs/coding-patterns.md`
 
 **IF** task involves persistence, creating/modifying repositories, EF Core mapping conventions:
-➜ READ `backend/.specs/docs/data-access-and-persistence.md`
+➜ READ `.specs/docs/data-access-and-persistence.md`
 
 **IF** task involves automate tests:
-➜ READ `backend/.specs/docs/automated-tests.md`
+➜ READ `.specs/docs/automated-tests.md`
 
 ## HIGH PRIORITY
 
