@@ -18,10 +18,12 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["Directory.Build.props", "."]
 COPY ["Directory.Packages.props", "."]
+COPY ["src/Gateway.Domain/Gateway.Domain.csproj", "src/Gateway.Domain/"]
+COPY ["src/Gateway.Application/Gateway.Application.csproj", "src/Gateway.Application/"]
+COPY ["src/Gateway.Adapters.Persistence/Gateway.Adapters.Persistence.csproj", "src/Gateway.Adapters.Persistence/"]
 COPY ["src/Gateway.API/Gateway.API.csproj", "src/Gateway.API/"]
-COPY ["src/Domain/Domain.csproj", "src/Domain/"]
-COPY ["src/Core/Core.csproj", "src/Core/"]
-COPY ["src/Adapters.Persistence/Adapters.Persistence.csproj", "src/Adapters.Persistence/"]
+COPY ["src/Adapters.Authorization/Adapters.Authorization.csproj", "src/Adapters.Authorization/"]
+COPY ["src/SharedKernel/SharedKernel.csproj", "src/SharedKernel/"]
 RUN dotnet restore "./src/Gateway.API/Gateway.API.csproj"
 COPY . .
 WORKDIR "/src/Gateway.API"

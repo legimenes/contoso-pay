@@ -4,12 +4,12 @@ Payments gateway and backoffice for Contoso: the inbound payment flow (Gateway c
 
 ## Language
 
-_Domain terms are added here as they are resolved — run `/domain-modeling` when a term is settled. Keep each definition to one or two sentences, define what the term IS rather than what it does, and list rejected synonyms under `_Avoid_`._
+### Identity and access
 
-<!--
-Format:
+**Merchant**:
+A store onboarded to Contoso Pay that sends payment traffic through the Gateway. It owns exactly one AppClient.
+_Avoid_: store, loja, estabelecimento, customer, tenant, account
 
-**Term**:
-A one or two sentence description of the term.
-_Avoid_: synonym, other synonym
--->
+**AppClient**:
+The client-id and client-secret pair a Merchant uses to authenticate against the Gateway. A Merchant has exactly one; rotating a secret updates the existing AppClient instead of creating another.
+_Avoid_: OAuth client, application, API key, credential, merchant key
